@@ -3,7 +3,7 @@
 }
 
 .dashboard-side-nav {
-  @apply bg-deepBlue basis-1/6 p-5 flex flex-col gap-6;
+  @apply bg-deepBlue basis-1/6 p-7 flex flex-col gap-6;
 }
 
 /* .dashboard-side-nav-header {
@@ -23,7 +23,7 @@
 }
 
 .app-nav-item {
-  @apply flex hover:bg-lightGray p-3 rounded-md hover:text-btnColor;
+  @apply flex hover:bg-lightGray p-2 rounded-lg hover:text-btnColor;
 }
 
 .app-nav-item:hover .app-nav-item-icon {
@@ -38,7 +38,7 @@
 }
 
 .dashboard-main {
-  @apply bg-lightGray basis-5/6 p-5 flex flex-col gap-6;
+  @apply bg-lightGray basis-5/6 p-7 flex flex-col gap-6;
 }
 
 .dashboard-main-header {
@@ -46,7 +46,7 @@
 }
 
 .tab-title {
-  @apply text-3xl;
+  @apply text-2xl;
 }
 
 .user-profile-picture {
