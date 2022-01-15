@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "./css/buyNFTsTab.css";
+import "../css/buyNFTsTab.css";
 
 const { ethers } = require("ethers");
 const ABI = require("../ABI.json");

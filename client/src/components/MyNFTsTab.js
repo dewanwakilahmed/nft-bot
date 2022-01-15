@@ -1,4 +1,4 @@
-import "./css/myNFTsTab.css";
+import "../css/myNFTsTab.css";
 
 const MyNFTsTab = () => {
   return (

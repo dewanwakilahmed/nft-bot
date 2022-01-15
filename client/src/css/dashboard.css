@@ -1,0 +1,54 @@
+.dashboard {
+  @apply flex h-screen;
+}
+
+.dashboard-side-nav {
+  @apply bg-deepBlue basis-1/6 p-5 flex flex-col gap-6;
+}
+
+/* .dashboard-side-nav-header {
+  @apply grid place-items-start;
+} */
+
+.app-logo {
+  @apply h-16;
+}
+
+/* .dashboard-side-nav-body {
+  @apply bg-btnColor;
+} */
+
+.app-nav {
+  @apply flex flex-col gap-4;
+}
+
+.app-nav-item {
+  @apply flex hover:bg-lightGray p-3 rounded-md hover:text-btnColor;
+}
+
+.app-nav-item:hover .app-nav-item-icon {
+  filter: invert(37%) sepia(60%) saturate(2436%) hue-rotate(227deg)
+    brightness(100%) contrast(96%);
+}
+
+.app-nav-item-icon {
+  @apply h-6 w-6 mr-3;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
+    contrast(103%);
+}
+
+.dashboard-main {
+  @apply bg-lightGray basis-5/6 p-5 flex flex-col gap-6;
+}
+
+.dashboard-main-header {
+  @apply flex items-center justify-between;
+}
+
+.tab-title {
+  @apply text-3xl;
+}
+
+.user-profile-picture {
+  @apply h-16 rounded-full border-2 border-btnColor;
+}

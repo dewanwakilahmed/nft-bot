@@ -1,4 +1,4 @@
-import "./css/settingsTab";
+import "../css/settingsTab.css";
 
 const SettingsTab = () => {
   return (

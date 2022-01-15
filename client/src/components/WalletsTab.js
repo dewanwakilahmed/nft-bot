@@ -1,4 +1,4 @@
-import "./css/walletsTab.css";
+import "../css/walletsTab.css";
 
 const WalletsTab = () => {
   return (
