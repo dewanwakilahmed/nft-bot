@@ -23,7 +23,7 @@
 }
 
 .app-nav-item {
-  @apply flex hover:bg-lightGray p-2 rounded-lg hover:text-btnColor;
+  @apply flex hover:bg-deepGray px-4 py-2 rounded-lg hover:text-lightBlue;
 }
 
 .app-nav-item:hover .app-nav-item-icon {
@@ -38,17 +38,21 @@
 }
 
 .dashboard-main {
-  @apply bg-lightGray basis-5/6 p-7 flex flex-col gap-6;
+  @apply bg-deepGray basis-5/6 p-7 flex flex-col gap-6;
 }
 
 .dashboard-main-header {
-  @apply flex items-center justify-between;
+  @apply flex items-center justify-between pl-4;
 }
 
 .tab-title {
   @apply text-2xl;
 }
 
+.user-profile {
+  @apply cursor-pointer;
+}
+
 .user-profile-picture {
-  @apply h-16 rounded-full border-2 border-btnColor;
+  @apply h-14 rounded-full border-2 border-lightBlue;
 }

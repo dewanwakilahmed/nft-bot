@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import "../css/buyNFTsTab.css";
 
+import DeleteIcon from "../assets/icons/delete-icon.svg";
+
 const { ethers } = require("ethers");
 const ABI = require("../ABI.json");
 
@@ -64,43 +66,166 @@ const BuyNFTsTab = () => {
   };
 
   return (
-    <div className="App">
-      <h1 className="nft-bot">NFT Bot</h1>
-      <form onSubmit={buyNFT}>
-        <label>Contract Address: </label>
-        <input
-          type="text"
-          placeholder="NFT Contract Address"
-          value={ADDRESS}
-          onChange={(e) => setADDRESS(e.target.value)}
-        />
-        <br />
-        <label>Wallet Private Key: </label>
-        <input
-          type="text"
-          placeholder="Wallet Pvt Key"
-          value={privateKey}
-          onChange={(e) => setPrivateKey(e.target.value)}
-        />
-        <br />
-        <label>Infura API: </label>
-        <input
-          type="text"
-          placeholder="Infura API Key"
-          value={INFURA_API}
-          onChange={(e) => setINFURA_API(e.target.value)}
-        />
-        <br />
-        <label>Gas Limit: </label>
-        <input
-          type="number"
-          placeholder="Wallet Private Key"
-          value={GAS_LIMIT}
-          onChange={(e) => setGAS_LIMIT(e.target.value)}
-        />
-        <br />
-        <input type="submit" value="Buy NFT" />
-      </form>
+    <div className="buy-nfts-tab">
+      <div className="past-nfts-orders">
+        <p className="past-nfts-orders-title">Past NFTs Orders</p>
+        <table className="past-nfts-orders-table">
+          <tr className="past-nfts-orders-tr-th">
+            <th className="past-nfts-orders-th">Contract Address</th>
+            <th className="past-nfts-orders-th">Wallet Private Key</th>
+            <th className="past-nfts-orders-th">Status</th>
+            <th className="past-nfts-orders-th">Actions</th>
+          </tr>
+          <tr className="past-nfts-orders-tr">
+            <td className="past-nfts-orders-td">
+              0x495f947276749Ce646f68AC8c248420045cb7b5e
+            </td>
+            <td className="past-nfts-orders-td">
+              0x5b3256965e7C3cF26E11FCAf296DfC8807C01073
+            </td>
+            <td className="past-nfts-orders-td">
+              <div className="nft-order-status">Checked</div>
+            </td>
+            <td className="past-nfts-orders-td">
+              <div className="nft-order-action-btns">
+                <img
+                  src={DeleteIcon}
+                  alt="delete-icon"
+                  className="delete-icon"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr className="past-nfts-orders-tr">
+            <td className="past-nfts-orders-td">
+              0x495f947276749Ce646f68AC8c248420045cb7b5e
+            </td>
+            <td className="past-nfts-orders-td">
+              0x5b3256965e7C3cF26E11FCAf296DfC8807C01073
+            </td>
+            <td className="past-nfts-orders-td">
+              <div className="nft-order-status">Checked</div>
+            </td>
+            <td className="past-nfts-orders-td last-td">
+              <div className="nft-order-action-btns">
+                <img
+                  src={DeleteIcon}
+                  alt="delete-icon"
+                  className="delete-icon"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr className="past-nfts-orders-tr">
+            <td className="past-nfts-orders-td">
+              0x495f947276749Ce646f68AC8c248420045cb7b5e
+            </td>
+            <td className="past-nfts-orders-td">
+              0x5b3256965e7C3cF26E11FCAf296DfC8807C01073
+            </td>
+            <td className="past-nfts-orders-td">
+              <div className="nft-order-status">Checked</div>
+            </td>
+            <td className="past-nfts-orders-td last-td">
+              <div className="nft-order-action-btns">
+                <img
+                  src={DeleteIcon}
+                  alt="delete-icon"
+                  className="delete-icon"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr className="past-nfts-orders-tr">
+            <td className="past-nfts-orders-td">
+              0x495f947276749Ce646f68AC8c248420045cb7b5e
+            </td>
+            <td className="past-nfts-orders-td">
+              0x5b3256965e7C3cF26E11FCAf296DfC8807C01073
+            </td>
+            <td className="past-nfts-orders-td">
+              <div className="nft-order-status">Checked</div>
+            </td>
+            <td className="past-nfts-orders-td  last-td">
+              <div className="nft-order-action-btns">
+                <img
+                  src={DeleteIcon}
+                  alt="delete-icon"
+                  className="delete-icon"
+                />
+              </div>
+            </td>
+          </tr>
+          <tr className="past-nfts-orders-tr">
+            <td className="past-nfts-orders-td">
+              0x495f947276749Ce646f68AC8c248420045cb7b5e
+            </td>
+            <td className="past-nfts-orders-td">
+              0x5b3256965e7C3cF26E11FCAf296DfC8807C01073
+            </td>
+            <td className="past-nfts-orders-td">
+              <div className="nft-order-status">Checked</div>
+            </td>
+            <td className="past-nfts-orders-td last-td">
+              <div className="nft-order-action-btns">
+                <img
+                  src={DeleteIcon}
+                  alt="delete-icon"
+                  className="delete-icon"
+                />
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div className="buy-new-nft">
+        <form onSubmit={buyNFT} className="buy-nft-form">
+          <p className="buy-new-nft-title">Buy New NFT</p>
+          <div className="buy-nft-form-input-container">
+            <label className="buy-nft-form-input-label">CONTRACT ADDRESS</label>
+            <input
+              type="text"
+              placeholder="NFT Contract Address"
+              value={ADDRESS}
+              onChange={(e) => setADDRESS(e.target.value)}
+              className="buy-nft-form-input"
+            />
+          </div>
+          <div className="buy-nft-form-input-container">
+            <label className="buy-nft-form-input-label">
+              WALLET PRIVATE KEY
+            </label>
+            <input
+              type="text"
+              placeholder="Wallet Pvt Key"
+              value={privateKey}
+              onChange={(e) => setPrivateKey(e.target.value)}
+              className="buy-nft-form-input"
+            />
+          </div>
+          <div className="buy-nft-form-input-container">
+            <label className="buy-nft-form-input-label">INFURA API</label>
+            <input
+              type="text"
+              placeholder="Infura API Key"
+              value={INFURA_API}
+              onChange={(e) => setINFURA_API(e.target.value)}
+              className="buy-nft-form-input"
+            />
+          </div>
+          <div className="buy-nft-form-input-container">
+            <label className="buy-nft-form-input-label">GAS LIMIT</label>
+            <input
+              type="number"
+              placeholder="Wallet Private Key"
+              value={GAS_LIMIT}
+              onChange={(e) => setGAS_LIMIT(e.target.value)}
+              className="buy-nft-form-input"
+            />
+          </div>
+          <input type="submit" value="Buy NFT" className="buy-nft-btn" />
+        </form>
+      </div>
     </div>
   );
 };

@@ -2,13 +2,14 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      roboto: ["Roboto", "sans-serif"],
+      acme: ["Acme", "sans-serif"],
     },
     extend: {
       colors: {
         deepBlue: "#060513",
-        lightGray: "#212733",
-        btnColor: "#6f66f9",
+        deepGray: "#212733",
+        lightBlue: "#6f66f9",
+        lightGray: "#5b5e65",
       },
     },
   },

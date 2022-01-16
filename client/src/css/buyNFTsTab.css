@@ -1,3 +1,78 @@
-.nft-bot {
-  @apply text-3xl;
+.buy-nfts-tab {
+  @apply flex;
+}
+
+/* PAST NFTS ORDERS */
+
+.past-nfts-orders {
+  @apply basis-4/6 p-4;
+}
+
+.past-nfts-orders-title {
+  @apply text-xl mb-4;
+}
+
+.past-nfts-orders-table {
+  @apply w-full text-left;
+  border-spacing: 1rem;
+}
+
+.past-nfts-orders-tr {
+  @apply p-2 hover:bg-lightGray;
+}
+
+.past-nfts-orders-tr-th {
+  @apply text-lightGray border-y-2 border-lightGray p-2;
+}
+
+.past-nfts-orders-th {
+  @apply p-3;
+}
+
+.past-nfts-orders-td {
+  @apply break-all p-2 cursor-pointer;
+}
+
+.nft-order-status {
+  @apply bg-lightBlue px-3 py-1 rounded-lg whitespace-nowrap;
+}
+
+.nft-order-action-btns {
+  @apply grid place-items-end;
+}
+
+.delete-icon {
+  @apply h-4 hover:opacity-80 active:opacity-90 cursor-pointer;
+  filter: invert(13%) sepia(76%) saturate(6752%) hue-rotate(340deg)
+    brightness(86%) contrast(92%);
+}
+
+/* BUY NEW NFT */
+
+.buy-new-nft {
+  @apply bg-deepBlue basis-2/6 rounded-xl p-8;
+}
+
+.buy-nft-form {
+  @apply flex flex-col gap-4 text-sm;
+}
+
+.buy-new-nft-title {
+  @apply text-lg;
+}
+
+.buy-nft-form-input-container {
+  @apply flex flex-col gap-2;
+}
+
+.buy-nft-form-input-label {
+  @apply text-lightGray;
+}
+
+.buy-nft-form-input {
+  @apply bg-lightGray text-neutral-50 p-2 rounded-md hover:bg-opacity-90;
+}
+
+.buy-nft-btn {
+  @apply bg-lightBlue px-6 py-2 rounded-lg w-min self-center hover:bg-opacity-90 cursor-pointer active:bg-opacity-95;
 }
