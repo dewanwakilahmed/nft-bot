@@ -1,0 +1,7 @@
+.wallet-generator-actions {
+  @apply flex gap-4 justify-center;
+}
+
+.save-wallet-btn {
+  @apply bg-lightGray px-6 py-2 rounded-lg w-min self-center hover:bg-opacity-90 cursor-pointer active:bg-opacity-95 whitespace-nowrap;
+}

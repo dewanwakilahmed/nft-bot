@@ -217,7 +217,7 @@ const BuyNFTsTab = () => {
             <label className="buy-nft-form-input-label">GAS LIMIT</label>
             <input
               type="number"
-              placeholder="Wallet Private Key"
+              placeholder="Gas Limit"
               value={GAS_LIMIT}
               onChange={(e) => setGAS_LIMIT(e.target.value)}
               className="buy-nft-form-input"
